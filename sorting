@@ -1,6 +1,7 @@
+//Alphabet Sorting
 alphabetSorting = (a,b) => {
     let alphabet = "AaBbCcÇçDdEeFfGgĞğHhIıİiJjKkLlMmNnOoÖöPpQqRrSsŞşTtUuÜüVvWwXxYyZz"
-        if (a.length ===0 || b.length === 0) 
+        if (a.length === 0 || b.length === 0) 
         {
           return a.length - b.length
         } 
@@ -19,6 +20,21 @@ alphabetSorting = (a,b) => {
         }
 }
 
+//Number Sorting
 numberSorting = (a , b) => {
     return a - b
+}
+
+//Create Random Number with Shuffle function
+Array.prototype.shuffle = function () 
+{
+    let numOfElement = this.length
+    while(--numOfElement > 0)
+    {
+        var randomNumber = Math.floor(Math.random() * (numOfElement + 1))
+        var tempValue = this[randomNumber]
+        this[randomNumber] = this[numOfElement]
+        this[numOfElement] = tempValue
+        return this
+    }
 }
